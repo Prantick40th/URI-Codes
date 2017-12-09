@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,amount;
+    int note[7] = {100,50,20,10,5,2,1};
+    int store[7];
+
+    scanf("%d",&amount);
+    printf("%d\n",amount);
+
+    for(i=0 ; i<7 ; i++){
+        store[i]=amount/note[i];
+        amount = amount % note[i];
+    }
+
+    for(j=0 ; j<7 ; j++){
+        printf("%d nota(s) de R$ %d,00\n",store[j],note[j]);
+    }
+
+    return 0 ;
+}

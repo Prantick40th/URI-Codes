@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    double a , b , c , x;
+
+    scanf("%lf%lf%lf",&a,&b,&c);
+
+    x = (b*b)-(4*a*c);
+
+    if(x<0)
+        printf("Impossivel calcular\n");
+    else if(a == 0)
+        printf("Impossivel calcular\n");
+    else
+    {
+        printf("R1 = %.5lf\n",(-b + sqrt(x))/(a+a));
+        printf("R2 = %.5lf\n",(-b - sqrt(x))/(a+a));
+    }
+    
+    return 0;
+}

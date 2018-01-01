@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+int main()
+{
+    int d1,h1,m1,s1,d2,h2,m2,s2,ds,dm,dh,dd;
+
+    printf("Dia ");
+    scanf("Dia %d",&d1);
+    scanf("%d  %d %d",&h1,&m1,&s1);
+    printf("Dia ");
+    scanf("Dia %d",&d2);
+    scanf("%d  %d  %d",&h2,&m2,&s2);
+
+    ds = s2 - s1;
+    dm = m2 - m1;
+    dh = h2 - h1;
+    dd = d2 - d1;
+
+    if(ds < 0)
+    {
+        ds = ds + 60;
+        dm--;
+    }
+
+    if(dm < 0)
+    {
+        dm = dm + 60;
+        dh--;
+    }
+
+    if(dh < 0)
+    {
+        dh = dh + 24;
+        dd--;
+    }
+
+    printf("%d dia(s)\n",dd);
+    printf("%d hora(s)\n",dh);
+    printf("%d minuto(s)\n",dm);
+    printf("%d segundo(s)\n",ds);
+
+    return 0;
+
+}

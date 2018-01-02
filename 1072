@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main ()
+{
+    int arr[10000],i,n;
+    int cnt1=0,cnt2=0;
+
+    scanf("%d",&n);
+
+    for(i=0 ; i<n ; i++){
+        scanf("%d",&arr[i]);
+    }
+
+    for(i=0 ; i<n ; i++){
+        if (arr[i] >= 10 && arr[i] <= 20)
+            cnt1++;
+        else
+            cnt2++;
+    }
+
+    printf("%d in\n",cnt1);
+    printf("%d out\n",cnt2);
+
+    return 0;
+}
+
